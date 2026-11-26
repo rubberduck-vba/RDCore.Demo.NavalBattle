@@ -1,7 +1,8 @@
 # NavalBattle: Run
 #
-# Plays the game on the RDCore platform, on Windows and on Linux. RDCore has no published release, so the job builds
-# the platform from source (rubberduck-vba/RDCore at RDCORE_REF) with its own PlatformPublish.ps1, then:
+# Plays the game on the RDCore platform, on Windows and on Linux. The job builds the platform from source
+# (rubberduck-vba/RDCore at RDCORE_REF) with its own PlatformPublish.ps1, so a run plays the game on RDCore's current main,
+# or on the branch, tag or commit the run names (the rdcore-ref input), then:
 #   1. `rdc run --unattended`, AI vs AI with a fixed seed, in the console: the game must play to "Game over" and exit 0.
 #      The command line names both players, so it asks nobody anything and runs unattended; a game against a person
 #      would fail here, as it should. The game is played in its window unless --console says otherwise, and a
